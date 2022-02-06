@@ -222,16 +222,23 @@ a.underline {
 }
 
 .logo {
-    height: 80px;
+    border-radius: 10px;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
     transition: all 0.2s;
 }
 
-#uoft:hover .logo,
+.wrapper:hover .logo {
+    opacity: 70%;
+}
+
+/* #uoft:hover .logo,
 #live:hover .logo,
 #ooley:hover .logo,
 #shopify:hover .logo {
     transform: scale(1.2);
-}
+} */
 
 #uoft:hover .link,
 #live:hover .link,
@@ -389,9 +396,9 @@ a.underline {
         background-color: hsl(146, 28%, 64%, 0.2);
     }
 
-    .logo {
+    /* .logo {
         height: 50px;
-    }
+    } */
 
     .row {
         flex-direction: column;
