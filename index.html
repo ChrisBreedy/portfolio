@@ -48,7 +48,7 @@
                 <div class="wrapper">
                     <a class="banner-link" href="/b1">
                         <div id="live" class="banner">
-                            <img src="/assets/build1/Image24.png" alt="The Pilot House" class="logo">
+                            <video muted loop src="/assets/build1/Build_1_Website.mp4" poster="/assets/build1/Image24.png" alt="The Pilot House" class="logo videoPreview">
                             <svg xmlns="http://www.w3.org/2000/svg" class="link" height="24px" viewBox="0 0 24 24"
                                 width="24px" fill="#000000">
                                 <path d="M0 0h24v24H0V0z" fill="none" />
@@ -478,6 +478,20 @@
         updateAppearance();
 
         toggle.addEventListener("change", (e) => { appearance = appearance === "dark" ? "light" : "dark"; updateAppearance(); });
+        
+        const videoElements = document.getElementsByClassName("videoPreview");
+
+        for (let index = 0; index < videoElements.length; index++) {
+            const videoPreview = videoElements[index];
+            videoPreview.addEventListener("mouseover", function() {
+                this.play();
+            });
+            videoPreview.addEventListener("mouseleave", function() {
+                this.pause();
+                this.load();
+            });
+        }
+
     </script>
 </body>
 
