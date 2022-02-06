@@ -27,6 +27,10 @@
     vertical-align: middle;
     width: 100%;
   }
+
+  .img-column img:hover {
+    cursor: pointer;
+  }
   
   /* Responsive layout - makes a two column-layout instead of four columns */
   @media screen and (max-width: 800px) {

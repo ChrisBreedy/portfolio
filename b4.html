@@ -49,7 +49,7 @@
                 </div>
                 <div class="img-column">
                     <img src="/portfolio/assets/build4/Image33.png" style="width:100%">
-                    <img src="/portfolio/assets/build4/Image34.png" style="width:100%">
+                    <img src="/portfolio/assets/build4/Image43.png" style="width:100%">
                     <img src="/portfolio/assets/build4/Image35.png" style="width:100%">
                     <img src="/portfolio/assets/build4/Image36.png" style="width:100%">
                 </div>
@@ -62,7 +62,6 @@
                 <div class="img-column">
                     <img src="/portfolio/assets/build4/Image41.png" style="width:100%">
                     <img src="/portfolio/assets/build4/Image42.png" style="width:100%">
-                    <img src="/portfolio/assets/build4/Image43.png" style="width:100%">
                 </div>
             </div>
         </div>
@@ -320,6 +319,12 @@
         updateAppearance();
 
         toggle.addEventListener("change", (e) => { appearance = appearance === "dark" ? "light" : "dark"; updateAppearance(); });
+
+        const imgElements = document.getElementsByTagName("img");
+        for (let index = 0; index < imgElements.length; index++) {
+            const img = imgElements[index];
+            img.setAttribute("onclick", `window.open('${img.src}', '_blank');`)
+        }
     </script>
 </body>
 

@@ -319,6 +319,12 @@
         updateAppearance();
 
         toggle.addEventListener("change", (e) => { appearance = appearance === "dark" ? "light" : "dark"; updateAppearance(); });
+
+        const imgElements = document.getElementsByTagName("img");
+        for (let index = 0; index < imgElements.length; index++) {
+            const img = imgElements[index];
+            img.setAttribute("onclick", `window.open('${img.src}', '_blank');`)
+        }
     </script>
 </body>
 

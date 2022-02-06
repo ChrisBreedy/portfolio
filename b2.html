@@ -56,13 +56,13 @@
                 <div class="img-column">
                     <img src="/portfolio/assets/build2/Image18.png" style="width:100%">
                     <img src="/portfolio/assets/build2/Image19.png" style="width:100%">
-                    <img src="/portfolio/assets/build1/Image20.png" style="width:100%">
-                    <img src="/portfolio/assets/build1/Image23.png" style="width:100%">
+                    <img src="/portfolio/assets/build2/Image4.png" style="width:100%">
+                    <img src="/portfolio/assets/build2/Image6.png" style="width:100%">
                 </div>
                 <div class="img-column">
-                    <img src="/portfolio/assets/build1/Image24.png" style="width:100%">
-                    <img src="/portfolio/assets/build1/Image8.png" style="width:100%">
-                    <img src="/portfolio/assets/build1/Image9.png" style="width:100%">
+                    <img src="/portfolio/assets/build2/Image7.png" style="width:100%">
+                    <img src="/portfolio/assets/build2/Image8.png" style="width:100%">
+                    <img src="/portfolio/assets/build2/Image9.png" style="width:100%">
                 </div>
             </div>
         </div>
@@ -320,6 +320,13 @@
         updateAppearance();
 
         toggle.addEventListener("change", (e) => { appearance = appearance === "dark" ? "light" : "dark"; updateAppearance(); });
+
+        const imgElements = document.getElementsByTagName("img");
+        for (let index = 0; index < imgElements.length; index++) {
+            const img = imgElements[index];
+            img.setAttribute("onclick", `window.open('${img.src}', '_blank');`)
+        }
+        
     </script>
 </body>
 
